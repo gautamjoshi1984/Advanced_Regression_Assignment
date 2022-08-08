@@ -69,6 +69,11 @@ We are required to model the price of houses with the available independent vari
     - Seaborn
     - Statsmodels
     - Sklearn
+        - LinearRegression
+        - Ridge
+        - Lasso
+        - RFE
+        - GridSearchCV etc.
 
 <!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
 
