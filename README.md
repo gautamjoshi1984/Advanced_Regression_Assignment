@@ -46,15 +46,23 @@ The company wants to know:
 We are required to model the price of houses with the available independent variables. This model will then be used by the management to understand how exactly the prices vary with the variables. They can accordingly manipulate the strategy of the firm and concentrate on areas that will yield high returns. Further, the model will be a good way for management to understand the pricing dynamics of a new market.
 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
-## Methodology Used
+## Methodology Used (High level steps)
 - First step we imported the dataset, understood and visualized the dataset for basic information
 - Next we did and Exploratory data analysis on the dataset to clean the dataset and prepare the dataset for modelling. 
-- Built a basic linear regression model and RFE model to see if it works, but both had some shortcomings. 
-- To overcome that we moved to Ridge and Lasso regularization techniques to build the models
+       - Missing value imputation
+       - Data type correction, assigning correct datatype
+       - Outlier treatment
+       - Derived columns
+       - Removing unnecessary features based on the EDA
+
+- Built a basic linear regression model and RFE model to see if it works, but both had some shortcomings i.e. overfitting and low model accuracy. 
+- To overcome that we moved to Ridge and Lasso regularization techniques to build the models using the features we arrived at after the EDA. 
 - After that we did residual analysis, prediction on the test data and model evaluation. 
+- We also created the Ridge and Lasso regularization models with all the features to see if that improves the accuracy and errors
+       - For this we just applied data pre-processing to the dataset and applied the Ridge and Lasso regularization
 - We also created a view to compare the outputs and metrices from different models in a table
 - We identified the most important features impacting the target variable. 
-- Made some chnages to models to answer the subjective questions in the second part of this assignment
+- Made some changes to models to answer the subjective questions in the second part of this assignment
 - Finally concluded with the summary. 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
