@@ -79,15 +79,35 @@ We are required to model the price of houses with the available independent vari
 
 ## Conclusions
 - Top 10 features that impact the house prices 
-- Ridge ['1stFlrSF', 'GrLivArea', 'BsmtFinSF1', 'Neighborhood_StoneBr',
-       'OverallQual_9', 'OverallQual_10', 'FullBath_3', 'PropertyAge',
-       'LotArea', 'BsmtFinSF2']
-- Lasso ['GrLivArea', 'BsmtFinSF1', 'OverallQual_9', 'OverallQual_10',
-       'PropertyAge', 'Neighborhood_StoneBr', 'FullBath_3', '1stFlrSF',
-       'BsmtUnfSF', 'BsmtFinSF2']
+- Ridge Top 10 Features for Ridge with all features (alpha = 3)
+
+- 'GrLivArea', --->Above grade (ground) living area square feet
+- 'OverallQual_10',---> Rates the overall material and finish of the house, rating is 10 or not?
+- '1stFlrSF'--> First Floor square feet
+- 'BsmtFinSF1', ---> Type 1 finished square feet
+- 'TotalBsmtSF' --->Total square feet of basement area
+- '2ndFlrSF' ---> Second floor square feet
+- 'Neighborhood_StoneBr', --->Neighborhood is Stone Brook or not?
+- 'PoolQC_NoPool' ---> If the NoPool is Yes or no? It is negatively correlated i.e. price will be high if a pool is present in the property.
+- 'LotArea' ---> Lot size in square feet
+- 'FullBath_3', ---> Number of full bathrooms are 3 or not
+
+- Top 10 Features for Lasso with all features(alpha = 0.0001)
+
+- 'GrLivArea', --->Above grade (ground) living area square feet
+- 'OverallQual_10',---> Rates the overall material and finish of the house, rating is 10 or not?
+- 'TotalBsmtSF' ---> Total square feet of basement area
+- 'OverallQual_9', ---> Rates the overall material and finish of the house, rating is 9 or not?
+- 'PropertyAge', --->Age of the property, it is negatively correlated.
+- 'BsmtFinSF1', --->Type 1 finished square feet
+- 'PropertyAge', --->Age of the property, it is negatively correlated.
+- 'PoolQC_NoPool' ---> If the NoPool is Yes or no? It is negatively correlated i.e. price will be high if a pool is present in the property.
+- 'Neighborhood_StoneBr', --->Neighborhood is Stone Brook or not?
+- 'Neighborhood_Crawfor' --->Neighborhood is Crawfor or not?
+- 'OverallQual_8', ---> Rates the overall material and finish of the house, rating is 8 or not?
 
 We could see that more or less the final models predict almost same top 10 variables. However Lasso gives us an opportunity to reduce the 
-number of predictors in the final model by changing the lamba, so we suggest to use Lasso regularization in this case as the number of predictor variables is very high in this case. 
+number of predictors in the final model by changing the lambda, so we suggest to use Lasso regularization in this case as the number of predictor variables is very high in this case. 
 
 ## Acknowledgements
 Give credit here.
